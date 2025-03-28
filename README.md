@@ -1,16 +1,17 @@
-## Hi there 👋
+# Hi, I'm Hồ Quốc Đạt 👋
 
-<!--
-**hodat140600/hodat140600** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Unity Game Developer with experience in mobile game development.
 
-Here are some ideas to get you started:
+## 📄 My CV/Portfolio
+Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🎮 Projects
+- [Triple Butterfly: Block Puzzle](https://play.google.com/store/apps/details?id=com.wolffun.tripleblock)
+- [Match Block](https://play.google.com/store/apps/details?id=com.wolffun.matchblock)
+- [Thetan Rivals: Party Royale](https://play.google.com/store/apps/details?id=com.wolffun.thetanrivals)
+
+## 🔧 Skills
+- Unity Engine
+- C#, HLSL/GLSL
+- UI & Rendering
+- Game Optimization
