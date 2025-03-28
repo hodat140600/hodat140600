@@ -13,7 +13,7 @@ jobs:
       - name: Generate preview
         uses: sindresorhus/pageres-cli-action@v1
         with:
-          args: https://hodat140600.github.io/My-Info/ 800x600 --filename=cv-preview
+          args: https://hodat140600.github.io/My-Info/ 1080x3000 --filename=cv-preview
       - name: Commit changes
         run: |
           git config --global user.name 'GitHub Actions'
