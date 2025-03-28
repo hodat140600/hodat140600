@@ -1,7 +1,7 @@
 # Hồ Quốc Đạt - Unity Game Developer
 
 <div align="center">
-  <a href="https://yourusername.github.io/my-cv/">
+  <a href="https://hodat140600.github.io/My-Info/">
     <img src="https://img.shields.io/badge/View%20My%20Full%20CV-Online-blue?style=for-the-badge&logo=github" alt="View My CV" />
   </a>
 </div>
@@ -20,3 +20,6 @@
 - **Rendering**: Shader code (HLSL/GLSL), Render pipeline
 - **Game Systems**: UI, Particles System (VFX), Optimization
 - **Platforms**: Android, Firebase
+
+# My CV
+[![View my full CV](cv-preview.png)](https://yourusername.github.io/my-cv/)
