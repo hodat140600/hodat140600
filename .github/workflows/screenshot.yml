@@ -1,4 +1,4 @@
-name: Take screenshot of CV
+name: Take screenshot with Percy
 
 on:
   push:
@@ -7,53 +7,23 @@ on:
     - cron: '0 0 * * 0'  # Run weekly
 
 jobs:
-  screenshot:
+  percy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    
-    # Explicitly install Chrome
-    - name: Install Chrome
-      run: |
-        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-    
-    # Install Puppeteer without Chrome (we'll use the one we just installed)
-    - name: Install Puppeteer
-      run: npm install puppeteer-core
-    
-    # Take screenshot with explicit Chrome path
-    - name: Take screenshot with Puppeteer
-      run: |
-        node -e "
-        const puppeteer = require('puppeteer-core');
+      - name: Checkout
+        uses: actions/checkout@v2
         
-        (async () => {
-          try {
-            const browser = await puppeteer.launch({
-              executablePath: '/usr/bin/google-chrome',
-              args: ['--no-sandbox', '--disable-setuid-sandbox']
-            });
-            const page = await browser.newPage();
-            await page.setViewport({ width: 1280, height: 1024 });
-            await page.goto('https://hodat140600.github.io/My-Info/', { waitUntil: 'networkidle0', timeout: 60000 });
-            await new Promise(r => setTimeout(r, 2000)); // Wait for any animations
-            await page.screenshot({ path: 'cv-preview.png', fullPage: true });
-            await browser.close();
-            console.log('Screenshot taken successfully');
-          } catch (error) {
-            console.error('Error taking screenshot:', error);
-            process.exit(1);
-          }
-        })();
-        "
-      
-    - name: Commit and push if changed
-      run: |
-        git config --global user.name 'GitHub Actions'
-        git config --global user.email 'actions@github.com'
-        git add -A
-        git diff --quiet && git diff --staged --quiet || git commit -m "Update CV preview"
-        git push
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          
+      - name: Install dependencies
+        run: npm install @percy/cli
+        
+      - name: Take Percy snapshot
+        run: npx percy snapshot https://hodat140600.github.io/My-Info/
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          
+      # Note: you would need to sign up for Percy and add your token to GitHub secrets
