@@ -3,8 +3,8 @@ on:
   repository_dispatch:
     types: [my-info-updated]
   schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight
-  workflow_dispatch:  # Allow manual triggering
+    - cron: '0 0 * * *'  # Sửa lỗi cú pháp cron (thiếu *)
+  workflow_dispatch:
 
 jobs:
   update_screenshot:
@@ -13,6 +13,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # Lấy toàn bộ lịch sử commit
+      
+      - name: Git pull to get latest changes
+        run: git pull origin $(git branch --show-current)
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -25,7 +29,7 @@ jobs:
       - name: Create screenshots directory if it doesn't exist
         run: mkdir -p screenshots
         
-      - name: Take screenshot
+      - name: Take screenshot with longer wait time
         run: |
           node -e "
           const puppeteer = require('puppeteer');
@@ -36,16 +40,34 @@ jobs:
             });
             const page = await browser.newPage();
             await page.setViewport({width: 1200, height: 800});
-            await page.goto('https://hodat140600.github.io/My-Info/', {waitUntil: 'networkidle0'});
+            
+            // Tắt cache để đảm bảo lấy nội dung mới
+            await page.setCacheEnabled(false);
+            
+            // Thêm timeout dài hơn và đợi trang tải hoàn toàn
+            await page.goto('https://hodat140600.github.io/My-Info/', {
+              waitUntil: 'networkidle0',
+              timeout: 60000
+            });
+            
+            // Đợi thêm để đảm bảo trang đã tải hoàn toàn
+            await page.waitForTimeout(3000);
+            
             await page.screenshot({path: 'screenshots/cv-preview.png', fullPage: true});
             await browser.close();
           })()
           "
           
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet screenshots/cv-preview.png || echo "changes=true" >> $GITHUB_OUTPUT
+          
       - name: Commit and push if changed
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add screenshots/cv-preview.png
-          git commit -m "Update CV preview" || exit 0
+          git commit -m "Update CV preview [skip ci]"
           git push
