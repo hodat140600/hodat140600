@@ -11,7 +11,7 @@ jobs:
       - name: Dispatch event to profile repo
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}  # This line was missing
           repository: hodat140600/My-Info
           event-type: my-info-updated
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
