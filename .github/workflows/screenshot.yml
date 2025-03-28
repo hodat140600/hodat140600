@@ -1,4 +1,4 @@
-name: Take screenshot with Percy
+name: Take screenshot of CV
 
 on:
   push:
@@ -7,23 +7,22 @@ on:
     - cron: '0 0 * * 0'  # Run weekly
 
 jobs:
-  percy:
+  screenshot:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-          
-      - name: Install dependencies
-        run: npm install @percy/cli
-        
-      - name: Take Percy snapshot
-        run: npx percy snapshot https://hodat140600.github.io/My-Info/
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          
-      # Note: you would need to sign up for Percy and add your token to GitHub secrets
+    - uses: actions/checkout@v2
+    - name: Take screenshot
+      uses: flameddd/screenshots-ci-action@v1.1.0
+      with:
+        url: https://hodat140600.github.io/My-Info/
+        width: 1280
+        height: 800
+        fullPage: true
+        output: cv-preview.png
+    - name: Commit screenshot
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add cv-preview.png
+        git commit -m "Update CV preview" || echo "No changes to commit"
+        git push
