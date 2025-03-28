@@ -20,7 +20,7 @@ jobs:
         width: 1280
         height: 800
         fullPage: true
-        output: screenshots/cv-preview.png
+        output: cv-preview.png
     - name: Commit and push if changed
       run: |
         git config --global user.name "GitHub Actions"
