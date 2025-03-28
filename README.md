@@ -3,7 +3,7 @@
 Unity Game Developer with experience in mobile game development.
 
 ## 📄 My CV/Portfolio
-Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
+Check out my [detailed CV and portfolio](https://hodat140600.github.io/My-Info/)
 
 ![Preview of my CV](cv-preview.png)
 
