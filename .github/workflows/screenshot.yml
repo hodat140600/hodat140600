@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    
     - name: Take screenshot
       uses: flameddd/screenshots-ci-action@v1.1.0
       with:
@@ -19,7 +20,18 @@ jobs:
         height: 800
         fullPage: true
         output: cv-preview.png
+    
+    - name: Check if screenshot was created
+      id: check_files
+      run: |
+        if [ -f "cv-preview.png" ]; then
+          echo "::set-output name=files_exists::true"
+        else
+          echo "::set-output name=files_exists::false"
+        fi
+    
     - name: Commit screenshot
+      if: steps.check_files.outputs.files_exists == 'true'
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
