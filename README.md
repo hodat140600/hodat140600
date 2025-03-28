@@ -1,10 +1,11 @@
-# Hồ Quốc Đạt - Unity Game Developer
+# Hi, I'm Hồ Quốc Đạt 👋
 
-<div align="center">
-  <a href="https://hodat140600.github.io/My-Info/">
-    <img src="https://img.shields.io/badge/View%20My%20Full%20CV-Online-blue?style=for-the-badge&logo=github" alt="View My CV" />
-  </a>
-</div>
+Unity Game Developer with experience in mobile game development.
+
+## 📄 My CV/Portfolio
+Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
+
+![Preview of my CV](cv-preview.png)
 
 ## 💼 Experience
 - Unity Developer at **WOLFFUN GAME** (2023-2024)
