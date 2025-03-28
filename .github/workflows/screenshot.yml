@@ -20,11 +20,11 @@ jobs:
         width: 1280
         height: 800
         fullPage: true
-        output: cv-preview.png
+        output: screenshots/cv-preview.png
     - name: Commit and push if changed
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add cv-preview.png
+        git add screenshots/cv-preview.png
         git commit -m "Update CV preview" || echo "No changes to commit"
         git push https://${{ secrets.PAT }}@github.com/hodat140600/hodat140600.git
