@@ -2,11 +2,6 @@
 
 Unity Game Developer with experience in mobile and casual games.
 
-## 🎮 Featured Projects
-- [Triple Butterfly: Block Puzzle](https://play.google.com/store/apps/details?id=com.wolffun.tripleblock&pcampaignid=web_share) - Puzzle game
-- [Thetan Rivals: Party Royale](https://play.google.com/store/apps/details?id=com.wolffun.thetanrivals&pcampaignid=web_share) - Platform battle royale
-- [Thetan Immortal - PvP Duels](https://play.google.com/store/apps/details?id=com.wolffun.thetanimmortal&pcampaignid=web_share) - PvP duel game
-
 ## 💻 Skills
 - Unity Engine (UI, Rendering, VFX, Optimization)
 - C#, HLSL/GLSL
