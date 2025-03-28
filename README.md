@@ -1,26 +1,32 @@
 # Hi, I'm Hồ Quốc Đạt 👋
 
-Unity Game Developer with experience in mobile game development.
+Unity Game Developer with experience in mobile and casual games.
 
 ## 📄 My CV/Portfolio
-Check out my [detailed CV and portfolio](https://hodat140600.github.io/My-Info/)
+**[View My Complete CV and Portfolio](https://hodat140600.github.io/My-Info/)**
 
-![Preview of my CV](cv-preview.png)
+## 🎮 Featured Projects
+- [Triple Butterfly: Block Puzzle](https://play.google.com/store/apps/details?id=com.wolffun.tripleblock&pcampaignid=web_share) - Puzzle game
+- [Thetan Rivals: Party Royale](https://play.google.com/store/apps/details?id=com.wolffun.thetanrivals&pcampaignid=web_share) - Platform battle royale
+- [Thetan Immortal - PvP Duels](https://play.google.com/store/apps/details?id=com.wolffun.thetanimmortal&pcampaignid=web_share) - PvP duel game
 
-## 💼 Experience
-- Unity Developer at **WOLFFUN GAME** (2023-2024)
-- Unity Developer at **ROCKET STUDIO - ONESOFT** (2022-2023)
+## 💻 Skills
+- Unity Engine (UI, Rendering, VFX, Optimization)
+- C#, HLSL/GLSL
+- Mobile Game Development
+- Custom Unity Editor Tools
 
-## 🎮 Key Projects
-- [Thetan Rivals: Party Royale](https://play.google.com/store/apps/details?id=com.wolffun.thetanrivals) - Platform battle royale game
-- [Thetan Immortal - PvP Duels](https://play.google.com/store/apps/details?id=com.wolffun.thetanimmortal) - PvP duel game
-- [Triple Butterfly: Block Puzzle](https://play.google.com/store/apps/details?id=com.wolffun.tripleblock) - Puzzle game
+[![Portfolio](https://img.shields.io/badge/My_CV-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hodat140600.github.io/my-cv/)
+[![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)](https://hodat140600.itch.io)
 
-## 🛠️ Skills
-- **Unity Engine**: Custom Editor, Thirdparty Plugin, Tools Development
-- **Rendering**: Shader code (HLSL/GLSL), Render pipeline
-- **Game Systems**: UI, Particles System (VFX), Optimization
-- **Platforms**: Android, Firebase
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=hodat140600&show_icons=true&theme=radical)
 
-# My CV
-[![View my full CV](cv-preview.png)](https://yourusername.github.io/my-cv/)
+<!-- Technologies section -->
+## 🔧 Technologies & Tools
+![Unity](https://img.shields.io/badge/-Unity-000?&logo=Unity)
+![C#](https://img.shields.io/badge/-C%23-239120?&logo=c-sharp)
+![Git](https://img.shields.io/badge/-Git-F05032?&logo=git&logoColor=white)
+![Android](https://img.shields.io/badge/-Android-3DDC84?&logo=android&logoColor=white)
+
+<!-- GitHub activity graph -->
+![Activity Graph](https://activity-graph.herokuapp.com/graph?username=hodat140600&theme=github)
