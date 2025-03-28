@@ -3,9 +3,8 @@ on:
   repository_dispatch:
     types: [my-info-updated]
   schedule:
-    - cron: '0 0 * * *'  # Sửa lỗi cú pháp cron (thiếu *)
-  workflow_dispatch:
-
+    - cron: '0 0 * * *'  # Sửa lỗi cú pháp cron
+  workflow_dispatch:  # Allow manual triggering
 jobs:
   update_screenshot:
     runs-on: ubuntu-latest
@@ -24,12 +23,12 @@ jobs:
           node-version: '16'
           
       - name: Install Puppeteer
-        run: npm install puppeteer
+        run: npm install puppeteer@10.0.0  # Chỉ định phiên bản cụ thể
         
       - name: Create screenshots directory if it doesn't exist
         run: mkdir -p screenshots
         
-      - name: Take screenshot with longer wait time
+      - name: Take screenshot
         run: |
           node -e "
           const puppeteer = require('puppeteer');
@@ -50,8 +49,8 @@ jobs:
               timeout: 60000
             });
             
-            // Đợi thêm để đảm bảo trang đã tải hoàn toàn
-            await page.waitForTimeout(3000);
+            // Sử dụng setTimeout thay vì waitForTimeout
+            await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 3000)));
             
             await page.screenshot({path: 'screenshots/cv-preview.png', fullPage: true});
             await browser.close();
