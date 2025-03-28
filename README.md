@@ -17,4 +17,6 @@ Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
 - Game Optimization
 
 # CV Preview
-![My CV](cv-preview.png)
+<div align="center">
+  <iframe src="https://hodat140600.github.io/My-Info/" width="800" height="600" frameborder="0"></iframe>
+</div>
