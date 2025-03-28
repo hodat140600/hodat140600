@@ -16,7 +16,7 @@ Unity Game Developer with experience in mobile and casual games.
 - Mobile Game Development
 - Custom Unity Editor Tools
 
-[![Portfolio](https://img.shields.io/badge/My_CV-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hodat140600.github.io/my-cv/)
+[![Portfolio](https://img.shields.io/badge/My_CV-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hodat140600.github.io/My-Info/)
 [![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)](https://hodat140600.itch.io)
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=hodat140600&show_icons=true&theme=radical)
