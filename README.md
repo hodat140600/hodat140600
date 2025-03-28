@@ -15,3 +15,6 @@ Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
 - C#, HLSL/GLSL
 - UI & Rendering
 - Game Optimization
+
+# CV Preview
+![My CV](cv-preview.png)
