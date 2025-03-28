@@ -2,10 +2,6 @@
 
 Unity Game Developer with experience in mobile and casual games.
 
-## 📄 My CV/Portfolio
-![My CV Preview](screenshots/cv-preview.png)
-Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
-
 ## 🎮 Featured Projects
 - [Triple Butterfly: Block Puzzle](https://play.google.com/store/apps/details?id=com.wolffun.tripleblock&pcampaignid=web_share) - Puzzle game
 - [Thetan Rivals: Party Royale](https://play.google.com/store/apps/details?id=com.wolffun.thetanrivals&pcampaignid=web_share) - Platform battle royale
@@ -17,11 +13,6 @@ Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
 - Mobile Game Development
 - Custom Unity Editor Tools
 
-[![Portfolio](https://img.shields.io/badge/My_CV-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hodat140600.github.io/My-Info/)
-[![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)](https://hodat140600.itch.io)
-
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=hodat140600&show_icons=true&theme=radical)
-
 <!-- Technologies section -->
 ## 🔧 Technologies & Tools
 ![Unity](https://img.shields.io/badge/-Unity-000?&logo=Unity)
@@ -30,4 +21,15 @@ Check out my [detailed CV and portfolio](https://yourusername.github.io/my-cv/)
 ![Android](https://img.shields.io/badge/-Android-3DDC84?&logo=android&logoColor=white)
 
 <!-- GitHub activity graph -->
-![Activity Graph](https://activity-graph.herokuapp.com/graph?username=hodat140600&theme=github)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=hodat140600&theme=github)
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=hodat140600&theme=dark)](https://git.io/streak-stats) ![GitHub stats](https://github-readme-stats.vercel.app/api?username=hodat140600&show_icons=true&theme=radical)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hodat140600&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+## 📄 My CV/Portfolio
+![My CV Preview](screenshots/cv-preview.png)
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hodat140600.github.io/My-Info/)
+[![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)](https://hodat140600.itch.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/đạt-hồ-a064ab187/)
