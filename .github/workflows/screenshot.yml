@@ -1,6 +1,7 @@
 name: Update CV Preview
-
 on:
+  repository_dispatch:
+    types: [my-info-updated]
   schedule:
     - cron: '0 0 * * *'  # Run daily at midnight
   workflow_dispatch:  # Allow manual triggering
@@ -25,7 +26,6 @@ jobs:
           const puppeteer = require('puppeteer');
           
           (async () => {
-            // Add the no-sandbox flag to the launch options
             const browser = await puppeteer.launch({
               args: ['--no-sandbox', '--disable-setuid-sandbox']
             });
