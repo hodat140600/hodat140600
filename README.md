@@ -3,7 +3,7 @@
 Unity Game Developer with experience in mobile and casual games.
 
 ## 📄 My CV/Portfolio
-![My CV Preview](cv-preview.png)
+![My CV Preview](screenshots/cv-preview.png)
 
 ## 🎮 Featured Projects
 - [Triple Butterfly: Block Puzzle](https://play.google.com/store/apps/details?id=com.wolffun.tripleblock&pcampaignid=web_share) - Puzzle game
