@@ -49,8 +49,8 @@ jobs:
               timeout: 60000
             });
             
-            // Sử dụng setTimeout thay vì waitForTimeout
-            await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 3000)));
+            // Tăng thời gian chờ lên 5000ms (5 giây) để đảm bảo trang tải hoàn thiện
+            await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
             
             await page.screenshot({path: 'screenshots/cv-preview.png', fullPage: true});
             await browser.close();
