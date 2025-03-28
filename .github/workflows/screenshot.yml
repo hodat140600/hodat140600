@@ -12,27 +12,41 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@latest
+    # Explicitly install Chrome
+    - name: Install Chrome
+      run: |
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
     
+    # Install Puppeteer without Chrome (we'll use the one we just installed)
     - name: Install Puppeteer
-      run: npm install puppeteer
+      run: npm install puppeteer-core
     
+    # Take screenshot with explicit Chrome path
     - name: Take screenshot with Puppeteer
       run: |
         node -e "
-        const puppeteer = require('puppeteer');
+        const puppeteer = require('puppeteer-core');
         
         (async () => {
-          const browser = await puppeteer.launch({
-            executablePath: 'google-chrome',
-            args: ['--no-sandbox', '--disable-setuid-sandbox']
-          });
-          const page = await browser.newPage();
-          await page.setViewport({ width: 1280, height: 1024 });
-          await page.goto('https://hodat140600.github.io/My-Info/', { waitUntil: 'networkidle0' });
-          await page.screenshot({ path: 'cv-preview.png', fullPage: true });
-          await browser.close();
+          try {
+            const browser = await puppeteer.launch({
+              executablePath: '/usr/bin/google-chrome',
+              args: ['--no-sandbox', '--disable-setuid-sandbox']
+            });
+            const page = await browser.newPage();
+            await page.setViewport({ width: 1280, height: 1024 });
+            await page.goto('https://hodat140600.github.io/My-Info/', { waitUntil: 'networkidle0', timeout: 60000 });
+            await new Promise(r => setTimeout(r, 2000)); // Wait for any animations
+            await page.screenshot({ path: 'cv-preview.png', fullPage: true });
+            await browser.close();
+            console.log('Screenshot taken successfully');
+          } catch (error) {
+            console.error('Error taking screenshot:', error);
+            process.exit(1);
+          }
         })();
         "
       
