@@ -22,9 +22,7 @@ Unity Game Developer with experience in mobile and casual games.
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hodat140600&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
-## 📄 My CV/Portfolio
+## 📄 My CV/Portfolio [![CV](https://img.shields.io/badge/CV-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hodat140600.github.io/My-Info/) [![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)](https://hodat140600.itch.io) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/đạt-hồ-a064ab187/)
 ![My CV Preview](screenshots/cv-preview.png)
 
-[![CV](https://img.shields.io/badge/CV-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hodat140600.github.io/My-Info/)
-[![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)](https://hodat140600.itch.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/đạt-hồ-a064ab187/)
+
